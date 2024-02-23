@@ -16,7 +16,7 @@ void displayArr(int arr[], int size)
          << endl;
 }
 
-void modifyScores(string name, float weight, int grades[], int size) // formal parameters
+void modifyScores(string name, float weight, int grades[], int size) // formal parameters(形參)
 {
     for (int i = 0; i < size; i++)
     {
@@ -31,14 +31,14 @@ void modifyScores(string name, float weight, int grades[], int size) // formal p
 
 int main()
 {
-    int scores[5] = {60, 100, 0, 36, 85};
+    int scores[5] = {60, 100, 0, 36, 85}; // array
     string courseName = "CIS101";
     float weight = 1.0;
     int size = sizeof(scores) / sizeof(scores[0]);
     cout << "BEFORE calling modifyScores(): courseName = " << courseName << "\t   weight = " << weight << endl;
     cout << "                               scores = ";
     displayArr(scores, size);
-    modifyScores(courseName, weight, scores, size); // actual arguments
+    modifyScores(courseName, weight, scores, size); // actual arguments(實參)
     cout << "AFTER calling modifyScores() : courseName = " << courseName << "\t   weight = " << weight << endl;
     cout << "                               scores = ";
     displayArr(scores, size);
